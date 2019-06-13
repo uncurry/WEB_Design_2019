@@ -5,59 +5,93 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
  		<link rel="stylesheet" type="text/css" href="css/style.css">
  		<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
- 		<script type="text/javascript" src="jquery-3.3.1.js"></script>
-		
-
  		<ul>
   			<li><a class="active" href="index.html">Home</a></li>
   			<li><a class="active" href="browse.html">Browse</a></li>
-  			<li><a href="#contact">Contact</a></li>
-  			<li><a href="#about">About</a></li>
+  			<li><a class="active" href="checkout.html">Shopping cart</a></li>
+  			<li><a class="active" href="contact.html">Contact us</a></li>
 		</ul>
 	</head>
 		
 	<body class="bg" background="images/background.png">
 		<table class="table">
 			<tr>
+
 				<td class="card">
-			  			<img src="images/book1.png" alt="book1" style="width:100%">
-			  			<h1>Stephen King - It</h1>
-			  			<p class="price">$10.00</p>
-			  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-			  			<p><button>Add to Cart</button></p>
+					<img src="images/book1.png" alt="book1" style="width:100%">
+			  		<h1>Stephen King - It</h1>
+			  		<p class="price">$10.00</p>
+			  		<p>Novel by Stephen King.</p>
+			  		<input id="book1Q" type="number" value="0">
+			  		<p><button onClick = "buyItem('book1Q')" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
 		  			<img src="images/book2.png" alt="book2" style="width:100%">
 		  			<h1>Stephen King - Misery</h1>
-		  			<p class="price">$9.99</p>
-		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<p><button>Add to Cart</button></p>
+		  			<p class="price">$11.00</p>
+		  			<p>Novel by Stephen King.</p>
+		  			<input id="book2Q" type="number" value="0">
+		  			<p><button onClick = "buyItem('book2Q')" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
 		  			<img src="images/book2.png" alt="book2" style="width:100%">
 		  			<h1>House of leaves</h1>
-		  			<p class="price">$9.99</p>
+		  			<p class="price">$15.00</p>
 		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<p><button>Add to Cart</button></p>
+		  			<input id="book3Q" type="number" value="0">
+		  			<p><button onClick = "buyItem('book3Q')" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
 		  			<img src="images/book2.png" alt="book2" style="width:100%">
 		  			<h1>Stephen King - Misery</h1>
-		  			<p class="price">$9.99</p>
+		  			<p class="price">$10.00</p>
 		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<p><button>Add to Cart</button></p>
+		  			<input id="book4Q" type="number" value="0">
+		  			<p><button onClick = "buyItem('book4Q')" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
 		  			<img src="images/book2.png" alt="book2" style="width:100%">
 		  			<h1>Stephen King - Misery</h1>
-		  			<p class="price">$9.99</p>
+		  			<p class="price">$7.00</p>
 		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<p><button>Add to Cart</button></p>
+		  			<input id="book5Q" type="number" value="0">
+		  			<p><button onClick = "buyItem('book5Q')" type="button">Add to Cart</button></p>
 				</td>
-
-
 			</tr>
-			
+			<script>
+					var booksQ = [book1, book2, book3, book4];
+					var i;
+					var inputs = [];
+
+					var price1 = 10;
+					var price2 = 11;
+					var price3 = 15;
+					var price4 = 10;
+					var price5 = 7;
+
+					function buyItem (id) {
+						var i = id; 
+						switch(i) {
+						  case i.value = "bookQ1":
+						    booksQ[0].value++;
+						    break;
+						  case i.value = "bookQ2":
+						    booksQ[1].value++;
+						    break;
+						  case i.value = "bookQ3":
+						    booksQ[2].value++;
+						    break;
+						  case i.value = "bookQ4":
+						    booksQ[3].value++;
+						    break;
+						  case i.value = "bookQ5":
+						    booksQ[4].value++;
+						    break;
+						}
+					}
+
+					console.log(booksQ[0].value);
+			</script>
 		</table>
 	</body>
 </html>
