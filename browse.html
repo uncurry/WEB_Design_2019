@@ -8,7 +8,6 @@
  		<ul>
   			<li><a class="active" href="index.html">Home</a></li>
   			<li><a class="active" href="browse.html">Browse</a></li>
-  			<li><a class="active" href="checkout.html">Shopping cart</a></li>
   			<li><a class="active" href="contact.html">Contact us</a></li>
 		</ul>
 	</head>
@@ -17,81 +16,98 @@
 		<table class="table">
 			<tr>
 
-				<td class="card">
-					<img src="images/book1.png" alt="book1" style="width:100%">
+				<td class="card" style="height: 400px">
+					<img src="images/book1.png" alt="book1" style="width:80%" >
 			  		<h1>Stephen King - It</h1>
 			  		<p class="price">$10.00</p>
 			  		<p>Novel by Stephen King.</p>
-			  		<input id="book1Q" type="number" value="0">
-			  		<p><button onClick = "buyItem('book1Q')" type="button">Add to Cart</button></p>
+			  		<input id="book1" type="number" value="0">
+			  		<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:100%">
+		  			<img src="images/book2.png" alt="book2" style="width:80%">
 		  			<h1>Stephen King - Misery</h1>
 		  			<p class="price">$11.00</p>
 		  			<p>Novel by Stephen King.</p>
-		  			<input id="book2Q" type="number" value="0">
-		  			<p><button onClick = "buyItem('book2Q')" type="button">Add to Cart</button></p>
+		  			<input id="book2" type="number" value="0">
+		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:100%">
+		  			<img src="images/book3.png" alt="book2" style="width:80%">
 		  			<h1>House of leaves</h1>
 		  			<p class="price">$15.00</p>
-		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<input id="book3Q" type="number" value="0">
-		  			<p><button onClick = "buyItem('book3Q')" type="button">Add to Cart</button></p>
+		  			<p>Novel by Mark Z. Danielewski</p>
+		  			<input id="book3" type="number" value="0">
+		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:100%">
-		  			<h1>Stephen King - Misery</h1>
+		  			<img src="images/book4.png" alt="book2" style="width:80%">
+		  			<h1>>War and Peace</h1>
 		  			<p class="price">$10.00</p>
-		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<input id="book4Q" type="number" value="0">
-		  			<p><button onClick = "buyItem('book4Q')" type="button">Add to Cart</button></p>
+		  			<p>War and Peace is a novel by the Russian author Leo Tolstoy.</p>
+		  			<input id="book4" type="number" value="0">
+		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:100%">
+		  			<img src="images/book2.png" alt="book2" style="width:80%">
 		  			<h1>Stephen King - Misery</h1>
 		  			<p class="price">$7.00</p>
 		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-		  			<input id="book5Q" type="number" value="0">
-		  			<p><button onClick = "buyItem('book5Q')" type="button">Add to Cart</button></p>
+		  			<input id="book5" type="number" value="0">
+		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
 				</td>
 			</tr>
-			<script>
-					var booksQ = [book1, book2, book3, book4];
-					var i;
-					var inputs = [];
+			
+		</table>
 
+		<div id="cart">
+            <div id="cart_t">
+                <table id="table_t">
+                	<tr> Shopping cart </tr>
+                	<td id="total"> Total: $ </td>
+                	<p><button type="button">Checkout<p>
+                	
+                	
+                </table>
+            </div>
+        </div>
+
+
+
+	</body>
+
+	<script>
 					var price1 = 10;
 					var price2 = 11;
 					var price3 = 15;
 					var price4 = 10;
 					var price5 = 7;
 
-					function buyItem (id) {
-						var i = id; 
-						switch(i) {
-						  case i.value = "bookQ1":
-						    booksQ[0].value++;
-						    break;
-						  case i.value = "bookQ2":
-						    booksQ[1].value++;
-						    break;
-						  case i.value = "bookQ3":
-						    booksQ[2].value++;
-						    break;
-						  case i.value = "bookQ4":
-						    booksQ[3].value++;
-						    break;
-						  case i.value = "bookQ5":
-						    booksQ[4].value++;
-						    break;
-						}
+					var total = 15;
+
+					function buyItem () {
+						var book1 = document.getElementById("book1").value;
+  						var book2 = document.getElementById("book2").value;
+  						var book3 = document.getElementById("book3").value;
+  						var book4 = document.getElementById("book4").value;
+  						var book5 = document.getElementById("book5").value;
+
+  						var item1_price = price1* book1;
+  						var item2_price = price2* book2;
+  						var item3_price = price3* book3;
+  						var item4_price = price4* book4;
+  						var item5_price = price5* book5;
+		
+
+  						total = item1_price + item2_price + item3_price + item4_price + item5_price;
+
+						document.getElementById("total").innerHTML = " Total: $" + total;
+  						
 					}
 
-					console.log(booksQ[0].value);
+					
+
+
+
 			</script>
-		</table>
-	</body>
 </html>
