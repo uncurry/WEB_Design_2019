@@ -7,7 +7,6 @@
  		<link href="https://fonts.googleapis.com/css?family=Exo" rel="stylesheet"> 
  		<ul>
   			<li><a class="active" href="index.html">Home</a></li>
-  			<li><a class="active" href="browse.html">Browse</a></li>
   			<li><a class="active" href="contact.html">Contact us</a></li>
 		</ul>
 	</head>
@@ -16,57 +15,61 @@
 		<table class="table">
 			<tr>
 
-				<td class="card" style="height: 400px">
-					<img src="images/book1.png" alt="book1" style="width:80%" >
+				<td class="card">
+					<img src="images/book1.png" alt="book1" style="width:80%" height="400">
 			  		<h1>Stephen King - It</h1>
 			  		<p class="price">$10.00</p>
 			  		<p>Novel by Stephen King.</p>
 			  		<input id="book1" type="number" value="0">
-			  		<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
+			  		
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:80%">
+		  			<img src="images/book2.png" alt="book2" style="width:80%" height="400">
 		  			<h1>Stephen King - Misery</h1>
 		  			<p class="price">$11.00</p>
 		  			<p>Novel by Stephen King.</p>
 		  			<input id="book2" type="number" value="0">
-		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
+		  			
 				</td>
 				<td class="card">
-		  			<img src="images/book3.png" alt="book2" style="width:80%">
+		  			<img src="images/book3.png" alt="book2" style="width:80%" height="400">
 		  			<h1>House of leaves</h1>
 		  			<p class="price">$15.00</p>
 		  			<p>Novel by Mark Z. Danielewski</p>
 		  			<input id="book3" type="number" value="0">
-		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
+		  			
 				</td>
 				<td class="card">
-		  			<img src="images/book4.png" alt="book2" style="width:80%">
-		  			<h1>>War and Peace</h1>
+		  			<img src="images/book4.png" alt="book2" style="width:80%" height="400">
+		  			<h1>War and Peace</h1>
 		  			<p class="price">$10.00</p>
-		  			<p>War and Peace is a novel by the Russian author Leo Tolstoy.</p>
+		  			<p>Novel by the Leo Tolstoy.</p>
 		  			<input id="book4" type="number" value="0">
-		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
+		  			
 				</td>
 				<td class="card">
-		  			<img src="images/book2.png" alt="book2" style="width:80%">
-		  			<h1>Stephen King - Misery</h1>
+		  			<img src="images/book5.png" alt="book2" style="width:80%" height="400">
+		  			<h1>Machines Like Me</h1>
 		  			<p class="price">$7.00</p>
-		  			<p>lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+		  			<p>Novel by Ian McEwan.</p>
 		  			<input id="book5" type="number" value="0">
-		  			<p><button onClick = "buyItem()" type="button">Add to Cart</button></p>
+		  			
 				</td>
 			</tr>
 			
 		</table>
 
+		<div id="wrapper">
+			<p><button onClick = "buyItem()" type="button">Add items to Cart</button></p>
+		</div>
+
 		<div id="cart">
             <div id="cart_t">
-                <table id="table_t">
-                	<tr> Shopping cart </tr>
-                	<td id="total"> Total: $ </td>
-                	<p><button type="button">Checkout<p>
-                	
+                <table>          
+                	<tr>
+                		<td id="total"> Total: $ </td>
+                		<td><button type="button" onclick="checkout()">Checkout</button></td>
+                	</tr>
                 	
                 </table>
             </div>
@@ -105,7 +108,9 @@
   						
 					}
 
-					
+					function checkout () {
+						alert("Items bought!");
+					}
 
 
 

@@ -65,17 +65,15 @@ button.bbutton:hover {
   text-align: center;
   font-size: 40px;
   font-family: 'Exo', sans-serif;
-  color: white;
+  color: #090909;
 }
 
 
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   max-width: 300px;
-  height: 200px;
   margin: auto;
   text-align: center;
-  color: white;
+  color: #090909;
   font-family: 'Exo', sans-serif;
 }
 
@@ -84,26 +82,11 @@ button.bbutton:hover {
   font-size: 22px;
 }
 
-.card button {
-  border: none;
-  outline: 0;
-  padding: 12px;
-  color: white;
-  background-color: #383737;
-  text-align: center;
-  cursor: pointer;
-  width: 100%;
-  font-size: 18px;
-}
-
-.card button:hover {
-  opacity: 0.7;
-}
 
 .table {
   padding: 20px;
   width: 100%;
-  height: 300px;
+  height: 10px;
 }
 
 
@@ -114,12 +97,57 @@ button.bbutton:hover {
 }
 
 #cart_t{
-
     position: relative;
     width: 100%;
     bottom: 0px; 
-    color: white;
+    color: #090909;
     font-size: 25px;
     font-family: 'Exo', sans-serif;
 }
 
+#cart button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #383737;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Exo', sans-serif;
+}
+
+#cart button:hover {
+  opacity: 0.7;
+}
+
+input[type=number]:focus {
+  border: 3px solid #555;
+}
+
+#wrapper {
+  width: 100%;
+  height: 70px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#wrapper button {
+  border: none;
+  outline: 0;
+  padding: 12px;
+  color: white;
+  background-color: #383737;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+  font-family: 'Exo', sans-serif;
+}
+
+#wrapper button:hover {
+  opacity: 0.7;
+}
